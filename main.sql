@@ -1,7 +1,8 @@
 .headers "on"
 .mode "column"
 
---Part 1
+
+--Creating Part 1 Table
 CREATE TABLE cardDecks (
     card_name varchar(255),
     brand varchar(255),
@@ -9,21 +10,20 @@ CREATE TABLE cardDecks (
     price int
 );
 
+--Creating Part 2 Table
 CREATE TABLE wishlist (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name varchar(255),
+	name varchar(100),
 	quantity varchar(255),
-	price int
-
-
-
+	price int,
+	purpose varchar(255)
 );
 
 
 
 
 
-
+--Adding records into Part 1 Table
 INSERT INTO cardDecks (card_name, brand, total_cards, price)
 VALUES ('Standard', 'Bicycle', 54, 7),
 ('Magic Carpet', 'Bicycle', 54, 9), 
@@ -31,9 +31,14 @@ VALUES ('Standard', 'Bicycle', 54, 7),
 ('007 Edition', 'Theory 11', 56, 10)
 ;
 
-INSERT INTO wishlist (name, quantity, price)
-VALUES ('gold', '100lb', 1765);
 
+--Adding records into Part 2 Table
+INSERT INTO wishlist (name, quantity, price, purpose)
+VALUES ('gold', '100lb', 1765, 'To Keep'),
+('lamborghini', 5, 200000, 'fun/drive'),
+('PS5', 10, 500, 'fun'),
+('Castle', 1, 500000, 'new home')
+;
 
 
 
