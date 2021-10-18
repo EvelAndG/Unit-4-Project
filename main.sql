@@ -40,23 +40,40 @@ VALUES ('gold', '100lb', 1765, 'To Keep'),
 ('Castle', 1, 500000, 'new home')
 ;
 
-
-
-
-
-
-
-
+--Printing out Queries
 
 .print
-.print      ---------------Table 1---------------     
-SELECT *
-FROM cardDecks;
-.print
-
-.print
-.print      ---------------Table 2---------------     
-SELECT *
-FROM wishlist;
+.print ------Query problem 1-------\n
+.print Display all Fields (Table 1)
+.print SELECT * FROM cardDecks;
+.print \n----Resulting Table-----\n
+SELECT * FROM cardDecks;
 
 
+.print \n\n
+.print ------Query problem 2-------\n
+.print Display all Fields (Table 2)
+.print SELECT * FROM wishlist;
+.print \n----Resulting Table-----\n
+
+SELECT * FROM wishlist;
+
+
+.print \n\n
+.print ------Query problem 3-------\n
+.print Retrieve your favorite item in the collection table. Only Display two fields of your choice.
+.print SELECT card_name, brand FROM cardDecks WHERE card_name='Monarch';
+.print \n----Resulting Table-----\n
+
+SELECT card_name, brand
+FROM cardDecks
+WHERE card_name='Monarch';
+
+.print \n\n
+.print ------Query problem 4-------\n
+.print Write the SQL statement to retrieve your favorite item in the wishlist table.  Use the id field to choose the record.  Show all fields except the id field.
+.print SELECT name, quantity, price, purpose FROM wishlist WHERE id=2;
+.print \n----Resulting Table-----\n
+SELECT name, quantity, price, purpose
+FROM wishlist
+WHERE id=2;
